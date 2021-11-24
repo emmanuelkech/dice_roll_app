@@ -4,13 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.diceroll.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        val rollButton: Button = findViewById(R.id.rollBtn)
+    private lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        super.onCreate(savedInstanceState)
+        setContentView(binding.root)
+
+        val rollButton: Button = binding.rollBtn
         rollButton.setOnClickListener {
             rollDiceOne()
             rollDiceTwo()

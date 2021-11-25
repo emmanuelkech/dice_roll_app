@@ -1,47 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/_30sdp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/rollBtn"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_50sdp"
-        android:background="@drawable/btn_bg"
-        android:text="@string/roll"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_30ssp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/diceOne"
-        app:layout_constraintVertical_bias="0.025" />
+        android:padding="@dimen/_30sdp"
+        tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/diceOne"
-        android:layout_width="@dimen/_145sdp"
-        android:layout_height="@dimen/_159sdp"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:contentDescription="@string/dice1"
-        app:layout_constraintEnd_toStartOf="@+id/diceTwo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/empty_dice" />
+        <ImageView
+            android:id="@+id/diceOne"
+            android:layout_width="@dimen/_145sdp"
+            android:layout_height="@dimen/_159sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:contentDescription="@string/dice1"
+            app:layout_constraintEnd_toStartOf="@+id/diceTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty_dice" />
 
-    <ImageView
-        android:id="@+id/diceTwo"
-        android:layout_width="@dimen/_145sdp"
-        android:layout_height="@dimen/_159sdp"
-        android:layout_marginTop="@dimen/_100sdp"
-        android:contentDescription="@string/dice2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/empty_dice" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/diceTwo"
+            android:layout_width="@dimen/_145sdp"
+            android:layout_height="@dimen/_159sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:contentDescription="@string/dice2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empty_dice" />
+
+        <Button
+            android:id="@+id/rollBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/btn_bg"
+            android:text="@string/roll"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30ssp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/diceOne"
+            app:layout_constraintVertical_bias="0.025" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
